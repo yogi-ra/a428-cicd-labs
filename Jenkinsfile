@@ -18,12 +18,11 @@ pipeline {
         }
        stage('Deploy') { 
             steps {
+                sh './jenkins/scripts/deliver.sh' 
+
 		timeout(time: 1, unit: 'MINUTES') {
-
-	                sh './jenkins/scripts/deliver.sh' 
+	                sh './jenkins/scripts/kill.sh' 
 		}
-
-                sh './jenkins/scripts/kill.sh' 
             }
         }
     }
