@@ -16,6 +16,7 @@ pipeline {
                 sh './jenkins/scripts/test.sh'
             }
         }
+<<<<<<< HEAD
        stage('Deliver') { 
             steps {
 <<<<<<< HEAD
@@ -39,5 +40,7 @@ pipeline {
 >>>>>>> parent of f109559... Mengubah mekanisme input message
             }
         }
+=======
+>>>>>>> parent of e877db7... Add Deliver stage
     }
 }
