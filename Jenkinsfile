@@ -16,31 +16,14 @@ pipeline {
                 sh './jenkins/scripts/test.sh'
             }
         }
-<<<<<<< HEAD
-       stage('Deliver') { 
+       stage('Deploy') { 
             steps {
-<<<<<<< HEAD
                 sh './jenkins/scripts/deliver.sh' 
-<<<<<<< HEAD
 
-=======
->>>>>>> parent of f109559... Mengubah mekanisme input message
-		timeout(time: 1, unit: 'MINUTES') {
-
-	                sh './jenkins/scripts/deliver.sh' 
+		sleep(time: 1, unit: 'MINUTES') {
+	                sh './jenkins/scripts/kill.sh' 
 		}
-<<<<<<< HEAD
-=======
-                input message: 'Finished using the web site? (Click "Proceed" to continue)' 
-                sh './jenkins/scripts/kill.sh' 
->>>>>>> parent of 4b54747... Merubah mekanisme input message
-=======
-
-                sh './jenkins/scripts/kill.sh' 
->>>>>>> parent of f109559... Mengubah mekanisme input message
             }
         }
-=======
->>>>>>> parent of e877db7... Add Deliver stage
     }
 }
