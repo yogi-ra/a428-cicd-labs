@@ -16,13 +16,18 @@ pipeline {
                 sh './jenkins/scripts/test.sh'
             }
         }
-       stage('Deploy') { 
+       stage('Deliver') { 
             steps {
                 sh './jenkins/scripts/deliver.sh' 
+<<<<<<< HEAD
 
 		timeout(time: 1, unit: 'MINUTES') {
 	                sh './jenkins/scripts/kill.sh' 
 		}
+=======
+                input message: 'Finished using the web site? (Click "Proceed" to continue)' 
+                sh './jenkins/scripts/kill.sh' 
+>>>>>>> parent of 4b54747... Merubah mekanisme input message
             }
         }
     }
