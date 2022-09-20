@@ -23,7 +23,6 @@ pipeline {
 		sleep(time: 1, unit: 'MINUTES') {
 	                sh './jenkins/scripts/kill.sh' 
 		}
-            }
-        }
+	}
     }
 }
