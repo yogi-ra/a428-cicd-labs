@@ -16,19 +16,15 @@ pipeline {
                 sh './jenkins/scripts/test.sh'
             }
         }
-<<<<<<< HEAD
        stage('Deploy') { 
             steps {
 		timeout(time: 1, unit: 'MINUTES') {
 
 	                sh './jenkins/scripts/deliver.sh' 
-#                input message: 'Finished using the web site? (Click "Proceed" to continue)' 
 		}
 
                 sh './jenkins/scripts/kill.sh' 
             }
         }
-=======
->>>>>>> parent of e877db7... Add Deliver stage
     }
 }
