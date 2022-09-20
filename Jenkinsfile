@@ -16,6 +16,7 @@ pipeline {
                 sh './jenkins/scripts/test.sh'
             }
         }
+<<<<<<< HEAD
        stage('Deploy') { 
             steps {
 		timeout(time: 1, unit: 'MINUTES') {
@@ -27,5 +28,7 @@ pipeline {
                 sh './jenkins/scripts/kill.sh' 
             }
         }
+=======
+>>>>>>> parent of e877db7... Add Deliver stage
     }
 }
